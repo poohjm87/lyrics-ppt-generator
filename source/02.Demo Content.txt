@@ -1,0 +1,24 @@
+This is the second sample file
+Showing how multiple files work together
+Each file becomes a separate section
+With its own title slide
+
+The program reads all text files
+From the source directory automatically
+Files are processed in alphabetical order
+Based on their filename numbers
+
+You can add as many files as needed
+Each will get its own section
+Blank slides separate different sections
+Making navigation clear and easy
+
+Perfect for lyrics presentations
+Educational content display
+Meeting agendas and outlines
+Any text that needs slide formatting
+
+Thank you for using this generator
+Feel free to customize and modify
+The code is open source and free
+Enjoy creating your presentations
