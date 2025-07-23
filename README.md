@@ -95,8 +95,8 @@ source/
 
 **필수 파일:**
 ```
-├── setup.bat              (설치용)
-├── run.bat               (실행용)
+├── setup.bat               (설치용)
+├── run.bat                 (실행용)
 ├── lyrics_ppt_generator.py (메인 프로그램)
 ├── requirements.txt        (라이브러리 목록)
 └── source/                 (가사 파일 폴더)
@@ -114,20 +114,6 @@ source/02.How Great Thou Art.txt
 source/template.pptx  # 교회 디자인 템플릿
 ```
 
-### 시집 제작
-```
-source/01.봄날.txt
-source/02.여름밤.txt
-source/03.가을 편지.txt
-```
-
-### 프레젠테이션 자료
-```
-source/01.회사 소개.txt
-source/02.제품 설명.txt
-source/template.pptx  # 회사 브랜딩 템플릿
-```
-
 ## ❓ 문제 해결
 
 **Q: 한글이 깨져요**  
@@ -135,9 +121,6 @@ A: 메모장에서 저장할 때 "UTF-8" 인코딩 선택
 
 **Q: PPT가 생성되지 않아요**  
 A: 파일명 형식 확인 (01.제목.txt)
-
-**Q: 인코딩 오류가 발생해요**  
-A: PowerShell 버전 사용 (Install.ps1, Run.ps1)
 
 **Q: PPT 파일을 찾을 수 없어요**  
 A: 바탕화면 확인 (권한 문제시 자동으로 바탕화면에 저장)
@@ -148,23 +131,9 @@ A: 바탕화면 확인 (권한 문제시 자동으로 바탕화면에 저장)
 - **라이브러리**: python-pptx
 - **운영체제**: Windows, macOS, Linux
 
-## 🤝 기여하기
-
-프로젝트 개선에 참여해주세요!
-
-1. Fork 후 새 브랜치 생성
-2. 기능 추가 또는 버그 수정
-3. Pull Request 제출
-
-### 개선 아이디어
-- [ ] 다양한 슬라이드 레이아웃 지원
-- [ ] 이미지 삽입 기능
-- [ ] PDF 출력 옵션
-- [ ] 웹 인터페이스 추가
-
 ## 📄 라이선스
 
-MIT License - 자유롭게 사용, 수정, 배포 가능합니다.
+자유롭게 사용, 수정, 배포 가능합니다.
 
 ---
 
