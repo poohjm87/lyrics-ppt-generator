@@ -15,11 +15,27 @@
 ## 🚀 빠른 시작
 
 ### Windows 사용자 (초보자용)
-1. **"Code" → "Download ZIP"**으로 다운로드
-2. **`install.bat`** 더블클릭하여 자동 설치
-3. **`실행.bat`** 더블클릭하여 실행
 
-👉 **[Windows 상세 가이드](Windows_사용법.md)** 보기
+**🎯 간단한 2단계로 완성!**
+
+#### 📦 1단계: 설치 (처음 한 번만)
+- **`setup.bat`** 우클릭 → **"관리자 권한으로 실행"**
+
+⚠️ **주의사항:**
+- 인터넷 연결 필요
+- 관리자 권한 필수  
+- 설치 시간: 약 5-10분
+
+#### 🚀 2단계: 사용 (매번)
+1. **source 폴더에 텍스트 파일 넣기**
+   - 📝 파일명 형식: `"01.노래제목.txt"`
+   - 💾 인코딩: UTF-8로 저장
+
+2. **프로그램 실행**
+   - `run.bat` 더블클릭
+
+3. **결과 확인**
+   - 바탕화면에서 PPT 파일 확인
 
 ### 개발자/고급 사용자
 ```bash
@@ -52,9 +68,18 @@ source/
 ```
 
 **파일명 규칙:**
-- `{순서}.{제목}.txt` 형식 사용
-- UTF-8 인코딩으로 저장
-- 한글 파일명 지원
+
+✅ **올바른 예시:**
+- `01.Amazing Grace.txt`
+- `02.찬양하라.txt`
+- `03.주님께 감사.txt`
+
+❌ **잘못된 예시:**
+- `Amazing Grace.txt` (숫자 없음)
+- `1.노래.txt` (01 형식이 아님)
+- `01노래.txt` (점(.) 없음)
+
+**인코딩:** UTF-8로 저장 필수
 
 ### 템플릿 사용하기 (선택사항)
 `source/template.pptx`에 원하는 PowerPoint 템플릿을 넣으면:
@@ -66,17 +91,18 @@ source/
 - `YYYYMMDD_가사집.pptx` 파일 생성
 - PowerPoint에서 열어 슬라이드 마스터로 추가 꾸미기 가능
 
-## 📁 프로젝트 구조
+## 📁 파일 구성
 
+**필수 파일:**
 ```
-lyrics-ppt-generator/
-├── source/                    # 텍스트 파일 디렉토리
-│   ├── 01.Sample Song.txt     # 샘플 파일 1
-│   ├── 02.Demo Content.txt    # 샘플 파일 2
-│   └── template.pptx          # 템플릿 파일 (선택사항)
-├── lyrics_ppt_generator.py    # 메인 프로그램
-├── requirements.txt           # Python 의존성
-└── README.md                  # 사용 설명서
+├── setup.bat              (설치용)
+├── run.bat               (실행용)
+├── lyrics_ppt_generator.py (메인 프로그램)
+├── requirements.txt        (라이브러리 목록)
+└── source/                 (가사 파일 폴더)
+    ├── 01.노래제목.txt
+    ├── 02.노래제목.txt
+    └── template.pptx (선택사항)
 ```
 
 ## 🛠️ 활용 예시
@@ -101,6 +127,20 @@ source/01.회사 소개.txt
 source/02.제품 설명.txt
 source/template.pptx  # 회사 브랜딩 템플릿
 ```
+
+## ❓ 문제 해결
+
+**Q: 한글이 깨져요**  
+A: 메모장에서 저장할 때 "UTF-8" 인코딩 선택
+
+**Q: PPT가 생성되지 않아요**  
+A: 파일명 형식 확인 (01.제목.txt)
+
+**Q: 인코딩 오류가 발생해요**  
+A: PowerShell 버전 사용 (Install.ps1, Run.ps1)
+
+**Q: PPT 파일을 찾을 수 없어요**  
+A: 바탕화면 확인 (권한 문제시 자동으로 바탕화면에 저장)
 
 ## ⚙️ 기술 요구사항
 
