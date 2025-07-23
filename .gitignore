@@ -40,3 +40,6 @@ ENV/
 
 # Temporary files
 ~$*
+
+# Claude Code files
+CLAUDE.md
