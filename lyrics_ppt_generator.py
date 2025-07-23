@@ -3,6 +3,7 @@
 
 import os
 import re
+import sys
 from datetime import datetime
 from pptx import Presentation
 from pptx.util import Inches, Pt
@@ -33,7 +34,7 @@ def read_lyrics_files(source_dir):
             title = filename.replace('.txt', '')
         
         try:
-            with open(filepath, 'r', encoding='utf-8') as file:
+            with open(filepath, 'r', encoding='utf-8', errors='ignore') as file:
                 content = file.read().strip()
                 lyrics_lines = [line.strip() for line in content.split('\n') if line.strip()]
                 
@@ -43,6 +44,8 @@ def read_lyrics_files(source_dir):
                 })
                 print(f"읽은 파일: {filename} ({len(lyrics_lines)}줄)")
         
+        except UnicodeDecodeError as e:
+            print(f"파일 인코딩 오류 {filename}: UTF-8로 저장해주세요")
         except Exception as e:
             print(f"파일 읽기 오류 {filename}: {e}")
     
@@ -113,9 +116,10 @@ def create_lyrics_ppt(lyrics_data, output_filename, template_path=None):
 
 def main():
     """메인 함수"""
-    source_dir = "source"
+    # Windows/Unix 호환 경로 처리
+    source_dir = os.path.join("source")
     
-    # 현재 날짜로 파일명 생성
+    # 현재 날짜로 파일명 생성 (Windows에서 파일명에 사용할 수 없는 문자 제거)
     today = datetime.now()
     output_filename = f"{today.strftime('%Y%m%d')}_가사집.pptx"
     
@@ -146,6 +150,10 @@ def main():
     create_lyrics_ppt(lyrics_data, output_filename, template_path)
     
     print("작업이 완료되었습니다!")
+    
+    # Windows에서 창이 바로 닫히지 않도록 대기
+    if sys.platform.startswith('win'):
+        input("엔터 키를 누르면 종료됩니다...")
 
 
 if __name__ == "__main__":
