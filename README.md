@@ -14,7 +14,14 @@
 
 ## 🚀 빠른 시작
 
-### 1. 설치
+### Windows 사용자 (초보자용)
+1. **"Code" → "Download ZIP"**으로 다운로드
+2. **`install.bat`** 더블클릭하여 자동 설치
+3. **`실행.bat`** 더블클릭하여 실행
+
+👉 **[Windows 상세 가이드](Windows_사용법.md)** 보기
+
+### 개발자/고급 사용자
 ```bash
 # 저장소 클론
 git clone https://github.com/poohjm87/lyrics-ppt-generator.git
@@ -26,14 +33,10 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 
 # 의존성 설치
 pip install -r requirements.txt
-```
 
-### 2. 실행
-```bash
+# 실행
 python lyrics_ppt_generator.py
 ```
-
-기본 제공되는 샘플 파일로 바로 테스트해볼 수 있습니다!
 
 ## 📝 사용 방법
 
