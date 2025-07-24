@@ -84,17 +84,13 @@ def create_lyrics_ppt(lyrics_data, output_filename, template_path=None):
             print(f"처리 중: {song['title']}")
             
             try:
-                # 노래 제목 슬라이드 생성 (Title Slide 레이아웃 사용)
-                title_slide = prs.slides.add_slide(title_layout)
-                title_slide.shapes.title.text = song['title']
-                
                 # 가사를 2줄씩 슬라이드에 추가 (Title and Content 레이아웃 사용)
                 lyrics = song['lyrics']
                 for i in range(0, len(lyrics), 2):
                     content_slide = prs.slides.add_slide(content_layout)
                     
-                    # 제목 영역은 비우고 내용 영역만 사용
-                    content_slide.shapes.title.text = ""
+                    # 제목 영역에 노래 제목 추가
+                    content_slide.shapes.title.text = song['title']
                     
                     # 내용 영역에 가사 추가
                     content_shape = content_slide.shapes.placeholders[1]
